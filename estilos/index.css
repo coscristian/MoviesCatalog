@@ -1,0 +1,79 @@
+/*
+<selector> {
+    <propiedad>: <valor>;
+    <propiedad>: <valor>;
+}
+*/
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1 {
+    font-weight: normal;
+    font-size: 40px;
+}
+
+a {
+    color: yellow;
+}
+
+p {
+    color: beige;
+}
+
+li {
+    color: beige;
+}
+
+#equipo {
+    color: tomato;
+}
+
+#intro {
+    text-decoration: line-through;
+}
+
+.goal-menu a{
+    color: brown;
+    font-size: x-arge;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.goal-menu a.segundo-nivel {
+    font-size: medium;
+    color: aliceblue;
+}
+
+#goal-menu a{
+    color:brown;
+    text-decoration-color: brown;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    color: blueviolet;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+a:active {
+    color: red;
+}
+
+a.boton:link {
+    background-color: #f44336;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+}
+
+a.boton:hover{
+    background-color: red;
+}

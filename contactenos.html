@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactenos</title>
+</head>
+<body>
+    <form method="post" action="/api/registro">
+        <label for="username">Nombre</label>
+        <input id="username" type="text" name="uname" placeholder="Nombre" required>
+
+        <label for="passw">Contraseña</label>
+        <input type="password" name="pass" placeholder="Contraseña" required>
+    
+        <label for="">Edad</label>
+        <input type="number" name="age" placeholder="Edad" required>
+
+        <label for="">Correo</label>
+        <input type="email" name="email">
+
+        <label for="color">Color</label>
+        <input type="color" name="color">
+
+        <input type="range" min="0" max="100">
+
+        <input type="date">
+
+        <input type="time">
+        <div>
+            <label for="">Genero</label>
+
+            <input id="male" type="radio">
+            <label for="male">Masculino</label>
+            
+            <input id="female" type="radio">
+            <label for="female">Femenino</label>
+            
+            <input id="ind" type="radio">
+            <label for="ind">Indeterminado</label>
+            
+        </div>
+        <label>Fecha nacimiento</label>
+        <input type="date">
+
+        <label>Hobbie</label>
+        <span>
+            <input id="basketball" type="checkbox">
+            <label for="basketball">Baloncesto</label>
+            
+            <input id="voleyball" type="checkbox">
+            <label for="">Voleyball</label>
+            
+            <input id="futbol" type="checkbox">
+            <label for="futbol">Futbol</label>
+            
+            <input id="tenis" type="checkbox">
+            <label for="tenis">Tenis</label>
+            
+        </span>
+        <label for="logros">Logros</label>
+        <textarea id="logros" placeholder="hola"></textarea>
+
+        <label>Carreras Afines</label>
+        <select>
+            <option>Ingeniería de Sistemas</option>
+            <option>Ingeniería Electrica</option>
+            <option>Ingeniería Mécanica</option>
+            <option>Administración de Empresas</option>
+            <option selected>Contaduría</option>
+        </select>
+
+        <label>Otras carreras que le gustan</label>
+        <input list="afines">
+        <datalist id="afines">
+            <option>Ingeniería de Sistemas</option>
+            <option>Ingeniería Electrica</option>
+            <option>Ingeniería Mécanica</option>
+            <option>Administración de Empresas</option>
+            <option>Contaduría</option>
+        </datalist>
+
+        <input type="search">
+
+        <hr>
+        <input type="file">
+        <input type="button" value="Es un boton" ondblclick="mostrarMensaje('Doble click en input button')">
+        <input type="submit" value="Otro enviar">
+        
+        <button type="button" onclick="mostrarMensaje('Click en botón accionar')">Accionar</button>
+        <button type="reset">Limpiar</button>
+        <button type="reset">Enviar</button>
+
+    </form>
+
+    <form action="">
+        <label for="contador">Contador</label>
+        <input id="contador" type="number" value="50">
+        <button type="button" onclick="incrementarContador()">Incrementar</button>
+        <p id="salida"></p>
+    
+    </form>
+
+    <script src="js/contactenos.js"></script>
+</body>
+</html>

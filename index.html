@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
+    <link rel="stylesheet" href="estilos/general.css">
+    <link rel="stylesheet" href="estilos/index.css">
 </head>
 <!--Hipervinculos: Etiquetas que sirven para moverse en paginas html. -->
 <body>
@@ -14,7 +16,7 @@
     <ul>
         <li><a href="#intro">Introducción</a></li>
         <li><a href="#mark">Marco Teórico</a></li>
-        <li><a href="#goal">Objetivos</a>
+        <li id="goal-menu"><a href="#goal">Objetivos</a>
             <ul>
                 <li><a href="#general">Generales</a></li>
                 <li><a href="#specifics">Especificos</a></li>
@@ -27,9 +29,12 @@
         <li><a href="https://www.utp.edu.co/" target="_blank">Ir a la página de la Universidad</a></li>
     </ul>
 
-    <h2><a id="intro"></a>Introducción</h2>
+    <a href="#" class="boton">Este es un botón</a>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum odit iure blanditiis molestiae quo a incidunt, minus doloremque aut atque aliquid quia nesciunt dolores aspernatur labore iusto numquam porro non?</p>
+    <h2 id="intro">Introducción</h2>
+    <p id = "equipo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum odit iure blanditiis molestiae quo a incidunt, minus doloremque aut atque aliquid quia nesciunt dolores aspernatur labore iusto numquam porro non? <br>
+        <img src="imagenes/estudiantes.jpg" alt="Estudiantes internacionales" title="Estudiantes en grupo">
+    </p>
 
     <h2><a id="mark"></a>Marco teorico</h2>
 
@@ -58,10 +63,65 @@
     <h2><a id="procedure"></a>Procedimiento realizado</h2>
     <ol>
         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime placeat ipsum nihil explicabo nemo iste perspiciatis magnam vitae expedita iusto. Magnam in minima ullam quia, autem at vitae voluptatum voluptate.</li>
+        <img src="https://www.javeriana.edu.co/pesquisa/wp-content/uploads/2021/07/nuevo-laboratorio-de-la-javeriana.jpg" alt="Laboratirio">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil fugiat unde iste nemo quas quasi voluptate corporis, esse aliquid! Dicta, sed ea voluptate esse labore officia quaerat qui iure veniam.
+
         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nam molestias repellendus. Eligendi maxime distinctio modi neque fugiat vitae atque officiis esse dicta natus, incidunt eaque asperiores exercitationem repudiandae quasi.</li>
+
         <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique molestias provident quibusdam doloremque quisquam consectetur enim beatae minima necessitatibus. Commodi nemo deleniti quidem illo magnam adipisci eveniet saepe minus reiciendis?</li>
         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quidem beatae nesciunt, quia sed unde labore. Beatae saepe eaque molestias odio, qui cumque! Tempora molestiae odit neque modi mollitia beatae?</li>
     </ol>
+
+    <h3>Datos recolectados</h3>
+    <table>
+        <!--Tabla Header: Cabecera = columnas -->
+        <tr>
+            <th colspan="2">Datos de Referencia</th>
+            <th rowspan="2">Valor</th>
+        </tr>
+        <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Virus</td>
+            <td>125.5</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Bacterias</td>
+            <td>125.5</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Globulos Blancos</td>
+            <td>78.3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Globulos Rojos</td>
+            <td>126.73</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>RH</td>
+            <td>O+</td>
+        </tr>
+        <tr>
+            <td rowspan="3">6</td>
+            <td>Colesterol bueno</td>
+            <td>O+</td>
+        </tr>
+        <tr>
+            <td>Colesterol malo</td>
+            <td>O+</td>
+        </tr>
+        <tr>
+            <td>Colesterol total</td>
+            <td>220.4</td>
+        </tr>
+    </table>
 
     <h2><a id="resume"></a>Conclusiones</h2>
     <ul>
@@ -70,7 +130,13 @@
         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quam itaque ut repudiandae ea nesciunt voluptatem nulla, perferendis, delectus dolorum officia doloribus officiis fuga impedit quasi. Ipsum saepe sit velit.</li>
     </ul>
 
+    <h3>Video resumen</h3>
+    <video src="videos/video1.mp4" controls autoplay muted loop>
+        
+    </video>
+
     <h2><a id="ref"></a>Bibliografia</h2>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quaerat rerum sapiente aperiam ipsa! Expedita modi, maiores magni ratione ex nemo, tempora obcaecati id, tempore perspiciatis reprehenderit dolorum cum officia.
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quaerat rerum sapiente aperiam ipsa! Expedita modi, maiores magni ratione ex nemo, tempora obcaecati id, tempore perspiciatis reprehenderit dolorum cum officia.</p>
+
 </body>
 </html>
