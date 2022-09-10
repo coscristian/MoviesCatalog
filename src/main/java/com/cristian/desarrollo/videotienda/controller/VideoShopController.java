@@ -16,6 +16,4 @@ public class VideoShopController {
         // Retorno cual es el objeto plantilla que le muestre al usuario
         return "catalog";
     }
-
-
 }

@@ -25,6 +25,10 @@ body {
   max-width: 42em;
 }
 
+.formularioLogIn {
+  padding-top: 155px;
+}
+
 .logoPrincipal {
   height: 50px;
 }
