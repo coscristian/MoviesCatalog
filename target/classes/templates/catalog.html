@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CVS Catalog</title>
+  <link rel="shortcut icon" href="" type="image/png">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/catalog.css">
   <link rel="stylesheet" href="css/template.css">
@@ -17,14 +18,16 @@
       <div>
         <h3 class="float-md-start mb-0">Cristian's VS</h3>
         <nav class="nav nav-masthead justify-content-center float-md-end">
-          <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="index.html">Home</a>
+          <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="/">Home</a>
           <a class="nav-link fw-bold py-1 px-0 active" href="#">Catalog</a>
           <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a>
           <a class="nav-link fw-bold py-1 px-0" href="#">Login</a>
         </nav>
       </div>
     </header>
+
     <main>
+      <h1 th:text="${title}"></h1>
       <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
@@ -91,37 +94,14 @@
             <span class="fs-4">Categories</span>
           </a>
           <hr>
-          <ul class="nav nav-pills flex-column mb-auto">
-            <li class="nav-item">
-              <a href="#" class="nav-link active" aria-current="page">
-                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"/></svg>
-                Action
-              </a>
-            </li>
             <li>
-              <a href="#" class="nav-link text-white">
-                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
-                Comedy
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link text-white">
-                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"/></svg>
-                Customers
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link text-white">
-                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
-                Romance
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link text-white">
-                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-                Sci-Fi
-              </a>
-            </li>
+              <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                  <a href="#" class="nav-link active" aria-current="page">
+                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"/></svg>
+                    Action
+                  </a>
+                </li>
           </ul>
         </div>
       <div>

@@ -25,7 +25,9 @@ body {
   max-width: 42em;
 }
 
-
+.logoPrincipal {
+  height: 50px;
+}
 /*
  * Header
  */
