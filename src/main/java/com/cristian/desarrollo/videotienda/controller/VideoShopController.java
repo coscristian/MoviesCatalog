@@ -16,4 +16,15 @@ public class VideoShopController {
         // Retorno cual es el objeto plantilla que le muestre al usuario
         return "catalog";
     }
+
+    @GetMapping("/contact")
+    public String goToContact(Model model) {
+        return "contact";
+    }
+
+    @GetMapping("/login")
+    public String goToLogin(Model model) {
+        return "login";
+    }
+
 }
