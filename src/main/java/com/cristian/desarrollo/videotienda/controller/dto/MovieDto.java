@@ -14,4 +14,5 @@ public class MovieDto {
     private Integer categoryId;
     private String description;
     private Integer duration;
+    private String imageUrl;
 }

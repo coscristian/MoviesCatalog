@@ -1,16 +1,11 @@
 package com.cristian.desarrollo.videotienda.controller;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import com.cristian.desarrollo.videotienda.controller.dto.CategoryDto;
-import com.cristian.desarrollo.videotienda.controller.dto.MovieDto;
+import com.cristian.desarrollo.videotienda.service.CatalogService;
 
 // La clase model va a representar a los datos.
 
@@ -18,20 +13,17 @@ import com.cristian.desarrollo.videotienda.controller.dto.MovieDto;
 @Controller
 public class VideoShopController {
 
-    private final List<CategoryDto> categories = Arrays.asList(
-        new CategoryDto("Action", 1),
-        new CategoryDto("Comedy", 2),
-        new CategoryDto("Romance", 3),
-        new CategoryDto("Sci-fi", 4)
-    );
+    private CatalogService catalogService;
 
-    private final List<MovieDto> movies = Arrays.asList(
-        new MovieDto(1, "Matrix", 4, "The best of the best", 120),
-        new MovieDto(2, "Dumb and Dumber", 2, "Esta pelicula trata de ...", 90)
-    );
+    public VideoShopController(CatalogService catalogService) {
+        this.catalogService = catalogService;
+    }
     
     @GetMapping("/catalog")
     public String goToCatalog(Model model) {
+
+        var categories = this.catalogService.getCategories();
+
         model.addAttribute("title", "Welcome to my site!!");
         
         model.addAttribute("categories", categories);
@@ -41,24 +33,26 @@ public class VideoShopController {
 
     @GetMapping("/catalog/{id}")
     public String loadCatalogById(@PathVariable("id") Integer id, Model model) {
-        
-        var category = categories.stream()
-            .filter(c -> c.getId().equals(id))
-            .findFirst()
-            .orElseThrow(() -> new RuntimeException("La categoria no existe"));
 
-        // Carga en el modelo el titulo y el id de la categoria    
-        model.addAttribute("title", category.getName());
-        model.addAttribute("id", category.getId());
+        var categoryOp = this.catalogService.getCategoryById(id);
+        var categories = this.catalogService.getCategories();
         model.addAttribute("categories", categories);
+        
+        if(categoryOp.isEmpty()){
+            // Mostrar mensaje de error
+            model.addAttribute("error", "La categoria no existe");
+        }else{
+            var category = categoryOp.get(); // Si no está vacío, dame el elemento
+            
+            // Carga en el modelo el titulo y el id de la categoria    
+            model.addAttribute("title", category.getName());
+            model.addAttribute("id", category.getId());
+            
 
-        // Carga las peliculas correspondientes a la categoria
-        var categoryMovies = movies.stream()
-            .filter(m -> m.getCategoryId().equals(id))
-            .collect(Collectors.toList());
+            var categoryMovies = this.catalogService.getMoviesByCategoryId(id);
 
-        model.addAttribute("movies", categoryMovies);
-
+            model.addAttribute("movies", categoryMovies);
+        }
         return "catalog";
     }
 

@@ -78,3 +78,16 @@ body {
       margin-top: 7rem;
     }
   }
+
+.card {
+  width:18rem;
+  
+}
+.movie {
+  height: 100%;
+}
+
+#error {
+  width: 100%;
+}
+
