@@ -65,5 +65,4 @@ public class VideoShopController {
     public String goToLogin(Model model) {
         return "login";
     }
-
 }
