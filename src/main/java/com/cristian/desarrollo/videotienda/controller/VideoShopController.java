@@ -48,7 +48,6 @@ public class VideoShopController {
             model.addAttribute("title", category.getName());
             model.addAttribute("id", category.getId());
             
-
             var categoryMovies = this.catalogService.getMoviesByCategoryId(id);
 
             model.addAttribute("movies", categoryMovies);

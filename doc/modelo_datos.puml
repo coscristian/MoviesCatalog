@@ -1,0 +1,15 @@
+@startuml
+
+class Category {
+    - String name
+    + void setName(String name)
+    + String getName()
+}
+
+class Movie {
+
+}
+
+
+
+@enduml
