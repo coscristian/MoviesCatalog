@@ -11,7 +11,7 @@ import com.cristian.desarrollo.videotienda.controller.dto.CategoryDto;
 import com.cristian.desarrollo.videotienda.controller.dto.MovieDto;
 import com.cristian.desarrollo.videotienda.service.CatalogService;
 
-@Service // Aquí hay una clase que implementa una interfaz y hace parte del grupo de servicios (El servicio de coloca en la clase, no en la interfaz)
+@Service // Aquí hay una clase que implementa una interfaz y hace parte del grupo de servicios (El servicio se coloca en la clase, no en la interfaz)
 public class CatalogServiceImpl implements CatalogService{
 
     // SOLID : 5 principios que deben cumplir todas las clases o moduos.   
