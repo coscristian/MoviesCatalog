@@ -7,18 +7,17 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.cristian.desarrollo.videotienda.service.CatalogService;
 
+import lombok.AllArgsConstructor;
+
 // La clase model va a representar a los datos.
 
+@AllArgsConstructor
 // Esta clase se va a encargar de atender todas las peticiones de navegación
 @Controller
 public class VideoShopController {
 
     private CatalogService catalogService;
 
-    public VideoShopController(CatalogService catalogService) {
-        this.catalogService = catalogService;
-    }
-    
     @GetMapping("/catalog")
     public String goToCatalog(Model model) {
 
