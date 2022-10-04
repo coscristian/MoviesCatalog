@@ -1,9 +1,9 @@
-package com.cristian.desarrollo.videotienda.model.repository;
+package com.cristian.desarrollo.videotienda.controller.model.repository;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.cristian.desarrollo.videotienda.model.entity.Category;
+import com.cristian.desarrollo.videotienda.controller.model.entity.Category;
 
 /* Para generar una implementación automatica de la interfaz
     se debe heredar la clase JpaRepositoryy enviarle como argumento

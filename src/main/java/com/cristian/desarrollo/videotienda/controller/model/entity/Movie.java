@@ -1,4 +1,4 @@
-package com.cristian.desarrollo.videotienda.model.entity;
+package com.cristian.desarrollo.videotienda.controller.model.entity;
 
 import javax.persistence.Entity; // JPA: Java Persistance Entity
 import javax.persistence.Id;

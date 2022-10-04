@@ -7,10 +7,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Component;
 
-import com.cristian.desarrollo.videotienda.model.entity.Category;
-import com.cristian.desarrollo.videotienda.model.entity.Movie;
-import com.cristian.desarrollo.videotienda.model.repository.CategoryRepository;
-import com.cristian.desarrollo.videotienda.model.repository.MovieRepository;
+import com.cristian.desarrollo.videotienda.controller.model.entity.Category;
+import com.cristian.desarrollo.videotienda.controller.model.entity.Movie;
+import com.cristian.desarrollo.videotienda.controller.model.repository.CategoryRepository;
+import com.cristian.desarrollo.videotienda.controller.model.repository.MovieRepository;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

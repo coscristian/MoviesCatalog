@@ -9,8 +9,8 @@ import org.springframework.stereotype.Service;
 
 import com.cristian.desarrollo.videotienda.controller.dto.CategoryDto;
 import com.cristian.desarrollo.videotienda.controller.dto.MovieDto;
-import com.cristian.desarrollo.videotienda.model.repository.CategoryRepository;
-import com.cristian.desarrollo.videotienda.model.repository.MovieRepository;
+import com.cristian.desarrollo.videotienda.controller.model.repository.CategoryRepository;
+import com.cristian.desarrollo.videotienda.controller.model.repository.MovieRepository;
 import com.cristian.desarrollo.videotienda.service.CatalogService;
 
 import lombok.AllArgsConstructor;
