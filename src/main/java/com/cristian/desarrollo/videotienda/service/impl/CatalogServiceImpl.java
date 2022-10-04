@@ -30,8 +30,6 @@ public class CatalogServiceImpl implements CatalogService{
     // ISP: 
     // DIP: 
 
-   
-
     @Override
     public List<CategoryDto> getCategories() {
         var categories =  categoryRepository.findAll(Sort.by("name"));
@@ -40,7 +38,7 @@ public class CatalogServiceImpl implements CatalogService{
                 .map(cat -> new CategoryDto(cat.getName(), cat.getId().intValue()))
                 .collect(Collectors.toList());
     }
-
+        
     @Override
     public Optional<CategoryDto> getCategoryById(Integer id) { // Recomendable cuando podemos retornar un elemento vacío o lleno, retonar un Optional y luego preguntar si el optional está vacio. (No retornar null)
         
