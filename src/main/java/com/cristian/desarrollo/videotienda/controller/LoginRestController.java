@@ -15,7 +15,7 @@ import lombok.AllArgsConstructor;
 // Servicios REST: Donde enviar informacion en JSON y la recibo en JSON
 
 @AllArgsConstructor
-@RestController // Voy a publicar unos metodos, esos metodos van a recibirun cuerpo y devuelven unos datos
+@RestController // Voy a publicar unos metodos, esos metodos van a recibir un cuerpo y devuelven unos datos
 @RequestMapping("api/login") // Cuando escriban esta ruta, necesito ejecutar una función que va a estar en esta clase
 public class LoginRestController {
     
