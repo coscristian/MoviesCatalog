@@ -9,8 +9,10 @@ import org.springframework.stereotype.Component;
 
 import com.cristian.desarrollo.videotienda.controller.model.entity.Category;
 import com.cristian.desarrollo.videotienda.controller.model.entity.Movie;
+import com.cristian.desarrollo.videotienda.controller.model.entity.User;
 import com.cristian.desarrollo.videotienda.controller.model.repository.CategoryRepository;
 import com.cristian.desarrollo.videotienda.controller.model.repository.MovieRepository;
+import com.cristian.desarrollo.videotienda.controller.model.repository.UserRepository;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -29,10 +31,18 @@ public class VideotiendaApplication {
 		
 		private final CategoryRepository categoryRepository;
 		private final MovieRepository movieRepository;
+		private final UserRepository userRepository;
 
 		@Override
 		public void run(String... args) throws Exception {
 			loadData();
+			loadUsers();
+		}
+
+		private void loadUsers() {
+			var user = new User("admin", "admin123", "Administrador", "admin@crisvideoshop.com",
+				 true, true);
+			userRepository.save(user);
 		}
 
 		private void loadData() {
@@ -78,6 +88,4 @@ public class VideotiendaApplication {
 			movieRepository.saveAll(movies);
 		}
 	}
-
-
 }
