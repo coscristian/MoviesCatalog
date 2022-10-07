@@ -34,8 +34,13 @@ const postToLogin = async (bodyObject) => {
     if(response.ok){
         const user = await response.json();
         localStorage.setItem("loggedUser", JSON.stringify(user));
-        console.log("Login exitoso ", user.username);
+        
+        alert("Bienvenido " + user.username + "!", "success");
+        
+        await new Promise(r => setTimeout(r, 2000));
+
         window.location.href = "/catalog";
+
     }else{
         const message = await response.text();
         showError(message);
@@ -43,9 +48,15 @@ const postToLogin = async (bodyObject) => {
 };
 
 const showError = (message) =>{
-    const errorDiv = document.getElementById("error");    
-    const errorMessage = document.getElementById("error-message");
-
-    errorDiv.style.display = 'block';
-    errorMessage.innerHTML = message;
+    alert(message, "danger");
 }
+
+const alert = (message, type) => {
+    document.getElementById("errorBox").innerHTML = [
+        `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+        `   <div>${message}</div>`,
+        '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+        '</div>'
+    ].join('');
+}
+
