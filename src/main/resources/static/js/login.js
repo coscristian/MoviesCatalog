@@ -1,15 +1,15 @@
 function login() {
-    const errorDiv = document.getElementById("error");    
+
     const username = document.getElementById("floatingInput").value;
     const password = document.getElementById("floatingpassword").value;
 
     if(username == "") {
-        errorDiv.innerHTML = "Username is required";
+        showError("Username is required");
         return;
     }
 
     if(password == "") {
-        errorDiv.innerHTML = "Password is required";
+        showError("Password is required");
         return;
     }
 
@@ -35,7 +35,17 @@ const postToLogin = async (bodyObject) => {
         const user = await response.json();
         localStorage.setItem("loggedUser", JSON.stringify(user));
         console.log("Login exitoso ", user.username);
+        window.location.href = "/catalog";
     }else{
-        document.getElementById("error").innerHTML = await response.text();
+        const message = await response.text();
+        showError(message);
     }
 };
+
+const showError = (message) =>{
+    const errorDiv = document.getElementById("error");    
+    const errorMessage = document.getElementById("error-message");
+
+    errorDiv.style.display = 'block';
+    errorMessage.innerHTML = message;
+}
